@@ -1,0 +1,5 @@
+This directory contains scripts and modules related with: 
+															> uploading files(images) to aws S3 buckets
+															> resizing images
+															> watermarking
+															> and creating multiple resized copies

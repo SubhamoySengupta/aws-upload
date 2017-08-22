@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>781</width>
+      <height>456</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="2" column="0">
+      <widget class="QProgressBar" name="progressBar">
+       <property name="value">
+        <number>24</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="sync_od_1">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Sync with S3</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/1_blue.png</normaloff>
+           <activeoff>icons/1_red.png</activeoff>
+           <activeon>icons/1_green.png</activeon>icons/1_blue.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="upload_od_2">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Edit and Upload</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/2_blue.png</normaloff>
+           <activeoff>icons/2_red.png</activeoff>
+           <activeon>icons/2_green.png</activeon>icons/2_blue.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="update_od_3">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Update DB</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/3_blue.png</normaloff>
+           <activeoff>icons/3_red.png</activeoff>
+           <activeon>icons/3_green.png</activeon>icons/3_blue.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Copy Fields</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Scan Storage</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="success_count"/>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="error_count"/>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="0">
+      <widget class="QTextBrowser" name="console">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>250</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew_Connection"/>
+    <addaction name="actionNew_Credentials"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <addaction name="actionSync_with_S3"/>
+    <addaction name="actionEdit_and_Upload"/>
+    <addaction name="actionUpdate_DB"/>
+    <addaction name="separator"/>
+    <addaction name="actionCopy_Fields"/>
+    <addaction name="actionScan_Storage"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionDocs"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuOptions"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNew_Connection">
+   <property name="text">
+    <string>New Connection</string>
+   </property>
+  </action>
+  <action name="actionNew_Credentials">
+   <property name="text">
+    <string>New Credentials</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionSync_with_S3">
+   <property name="text">
+    <string>Sync with S3</string>
+   </property>
+  </action>
+  <action name="actionEdit_and_Upload">
+   <property name="text">
+    <string>Edit and Upload</string>
+   </property>
+  </action>
+  <action name="actionUpdate_DB">
+   <property name="text">
+    <string>Update DB</string>
+   </property>
+  </action>
+  <action name="actionCopy_Fields">
+   <property name="text">
+    <string>Copy Fields</string>
+   </property>
+  </action>
+  <action name="actionScan_Storage">
+   <property name="text">
+    <string>Scan Storage</string>
+   </property>
+  </action>
+  <action name="actionDocs">
+   <property name="text">
+    <string>Docs</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionNew_Connection</sender>
+   <signal>triggered()</signal>
+   <receiver>actionExit</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sync_od_1</sender>
+   <signal>clicked()</signal>
+   <receiver>console</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>67</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>125</x>
+     <y>117</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
